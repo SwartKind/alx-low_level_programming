@@ -8,19 +8,19 @@ int main(void)
 {
 int nums;
 
-for (nums = 0; nums <= 9; nums++)
+for (nums = '0'; nums <= '9'; nums++)
 {
 putchar(nums);
-if (nums == 9)
+if (nums == '9')
 {
 continue;
 }
 else
 {
-putchar(,);
-putchar( );
+putchar(',');
+putchar(' ');
 }
 }
-putchar(n);
+putchar('\n');
 return (0);
 }
