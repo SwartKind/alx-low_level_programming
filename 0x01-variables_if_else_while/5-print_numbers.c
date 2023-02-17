@@ -12,6 +12,6 @@ for (nums = 0; nums < 10; nums++)
 {
 printf("%d", nums);
 }
-putchar(n);
+putchar('\n');
 return (0);
 }
