@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - count to 98
+ * print_to_98 - count up to 98
  * @n: variable to determine if input is greater than, less than or is 98
  *
  */
