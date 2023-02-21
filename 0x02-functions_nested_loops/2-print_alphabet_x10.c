@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_alphabet_x10 - prints out the alphabet
@@ -14,9 +14,9 @@ x = 0;
 
 while (x < 10)
 {
-for (i = a; i <= z; i++)
+for (i = 'a'; i <= 'z'; i++)
 _putchar(i);
-_putchar(n);
+_putchar('\n');
 x++;
 }
 }
