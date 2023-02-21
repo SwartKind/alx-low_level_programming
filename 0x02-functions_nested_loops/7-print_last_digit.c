@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * print_last_digit - extract last number of variable
- * @i: variable where we extract last number
- * Return: i if successful
+ * print_last_digit - prints the last digit of a numer.
+ * @n: digit to find the last place of.
+ * Return: The last digit.
  */
-
-int print_last_digit(int i)
+int print_last_digit(int n)
 {
-i %= 10
-if (i < 0)
-i= i * -1
-_putchar((i % 10) + '0')
-return (i % 10)
+	if (n < 0)
+		n = n * -1;
+	_putchar((n % 10) + '0');
+	return (n % 10);
+}
