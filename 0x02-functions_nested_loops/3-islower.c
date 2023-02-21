@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _islower - checks if input is lowercase
@@ -11,7 +11,7 @@ int _islower(int c)
 {
 int i;
 i = 0;
-if (c >= a && c <= z)
+if (c >= 'a' && c <= 'z')
 {
 i = 1;
 }
