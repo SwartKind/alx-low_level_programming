@@ -1,43 +1,39 @@
 #include "main.h"
 
 /**
- * print_number - print any integer using putchar
- * @n: integer to be printed
+ * print_number - prints a number with _putchar
+ * @n: Number to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
 void print_number(int n)
 {
-	int count, x, y, k;
+	int ten, i, neg;
+	unsigned int digit, digit2;
 
-	x = 0;
-	y = 1000000000;
-
-	if (n == 0)
-		_putchar('0');
-	else if (n > 0)
-		n *= -1;
-	else
-	       	_putchar('-');
-	for (count = 0; count < 10; count++)
+	ten = 1;
+	if (n < 0)
 	{
-		if (n / y == 0 && x == 0)
-		{
-			y /= 10;
-			
-			continue;
-		}
-		else if (x == 0)
-		{
-			_putchar(-(n / y) + '0');
-			x += 1;
-		}
-		else
-		{
-			k = (-(n / y) % 10);
-			if (k < 0)
-				k *= -1;
-			_putchar(k + '0');
-		}
-		y /= 10;
+		n = n * -1;
+		neg = 1;
+	}
+	digit = n;
+	digit2 = n;
+	while (digit >= 10)
+	{
+		digit = digit / 10;
+		ten = ten * 10;
+	}
+	if (neg == 1)
+	{
+		_putchar('-');
+	}
+	_putchar('0' + (digit2 / ten));
+	i = ten / 10;
+	while (i >= 1)
+	{
+		_putchar('0' + (digit2 / i) % 10);
+		i = i / 10;
 	}
 }
